@@ -17,8 +17,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/menu', function (){
+    return view('menu');
+});
+
 Route::get('/register', function (){
     return view('register');
-});
+})->name('register');
+
+Route::get('/show-register', function (){
+    return view('show-register');
+})->name('showRegister');
 
 Route::post('/finish-register', 'App\Http\Controllers\ControllerRegister@saveRegister')->name('finishRegister');

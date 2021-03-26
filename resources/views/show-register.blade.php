@@ -21,13 +21,37 @@
 </head>
 <body>
     <div class="container">
-        <h1>Show register</h1>
-        <div class="mb-3">
-            Name: {{$name}} <br>
-            Date of birth: {{$date}} <br>
-            Password: {{$password}} <br>
-            Matriculation id: {{$id}}
-        </div>
+        <h1>Show users</h1>
+        <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date of birth</th>
+                <th scope="col">Matriculation id</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Filipe Lima</td>
+                <td>16/05/2002</td>
+                <td>222333111</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Pedro Lucas</td>
+                <td>20/06/2003</td>
+                <td>645888222</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Luca Borela</td>
+                <td>02/08/2003</td>
+                <td>777222134</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </body>
 </html>

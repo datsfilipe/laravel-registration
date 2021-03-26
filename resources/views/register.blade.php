@@ -40,7 +40,7 @@
                 <label for="inputMatriculationNumber" class="form-label">Matriculation id:</label>
                 <input type="number" class="form-control" id="inputMatriculationNumber" name="id">
               </div>
-            <button type="submit" class="btn btn-primary">Finish register</button>
+            <button type="submit" class="btn btn-primary btn-dark">Finish register</button>
           </form>
     </div>
 </body>
