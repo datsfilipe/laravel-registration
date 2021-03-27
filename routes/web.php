@@ -25,8 +25,6 @@ Route::get('/register', function (){
     return view('register');
 })->name('register');
 
-Route::get('/show-register', function (){
-    return view('show-register');
-})->name('showRegister');
+Route::get('/show-register', 'App\Http\Controllers\ControllerRegister@showRegister')->name('showRegister');
 
 Route::post('/finish-register', 'App\Http\Controllers\ControllerRegister@saveRegister')->name('finishRegister');

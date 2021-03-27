@@ -25,31 +25,23 @@
         <table class="table table-dark">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">id</th>
                 <th scope="col">Name</th>
                 <th scope="col">Date of birth</th>
-                <th scope="col">Matriculation id</th>
+                <th scope="col">Password</th>
+                <th scope="col">Matriculation number</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Filipe Lima</td>
-                <td>16/05/2002</td>
-                <td>222333111</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Pedro Lucas</td>
-                <td>20/06/2003</td>
-                <td>645888222</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Luca Borela</td>
-                <td>02/08/2003</td>
-                <td>777222134</td>
-              </tr>
+              @foreach ($users as $item)
+                <tr>
+                  <th scope="row">{{$item->id}}</th>
+                  <td>{{$item->name}}</td>
+                  <td>{{$item->date}}</td>
+                  <td>{{$item->password}}</td>
+                  <td>{{$item->matriculation_id}}</td>
+                </tr>
+              @endforeach
             </tbody>
           </table>
     </div>

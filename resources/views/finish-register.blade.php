@@ -20,6 +20,42 @@
     </style>
 </head>
 <body>
-    <h1>Successful registration</h1>
+    <div class="container">
+        <div class="row">
+            <h1>Successful registration</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Name:
+            </div>
+            <div class="col-md-10">
+                {{$user->name}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Date of birth:
+            </div>
+            <div class="col-md-10">
+                {{$user->date}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Password:
+            </div>
+            <div class="col-md-10">
+                {{$user->password}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                Matriculation number:
+            </div>
+            <div class="col-md-10">
+                {{$user->matriculation_id}}
+            </div>
+        </div>
+    </div>
 </body>
 </html>

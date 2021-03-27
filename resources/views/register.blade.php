@@ -38,7 +38,7 @@
             </div>
             <div class="mb-3">
                 <label for="inputMatriculationNumber" class="form-label">Matriculation id:</label>
-                <input type="number" class="form-control" id="inputMatriculationNumber" name="id">
+                <input type="number" class="form-control" id="inputMatriculationNumber" name="matriculation_id">
               </div>
             <button type="submit" class="btn btn-primary btn-dark">Finish register</button>
           </form>
