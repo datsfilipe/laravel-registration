@@ -28,3 +28,9 @@ Route::get('/register', function (){
 Route::get('/show-register', 'App\Http\Controllers\ControllerRegister@showRegister')->name('showRegister');
 
 Route::post('/finish-register', 'App\Http\Controllers\ControllerRegister@saveRegister')->name('finishRegister');
+
+Route::get('/edit-register/{id}', 'App\Http\Controllers\ControllerRegister@editRegister')->name('editRegister');
+
+Route::get('/delete-register/{id}', 'App\Http\Controllers\ControllerRegister@deleteRegister')->name('deleteRegister');
+
+Route::post('/edit-register/save', 'App\Http\Controllers\ControllerRegister@saveEditedRegister')->name('saveEditedRegister');

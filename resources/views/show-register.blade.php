@@ -30,6 +30,7 @@
                 <th scope="col">Date of birth</th>
                 <th scope="col">Password</th>
                 <th scope="col">Matriculation number</th>
+                <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -40,6 +41,11 @@
                   <td>{{$item->date}}</td>
                   <td>{{$item->password}}</td>
                   <td>{{$item->matriculation_id}}</td>
+                  <td>
+                    <a class="text-decoration-none" href="{{ route('editRegister', $item->id ) }}">Editar</a>
+                    <br>
+                    <a class="text-decoration-none" href="{{ route('deleteRegister', $item->id ) }}">Excluir</a>
+                  </td>
                 </tr>
               @endforeach
             </tbody>
