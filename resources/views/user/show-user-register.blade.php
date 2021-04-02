@@ -42,9 +42,9 @@
                   <td>{{$item->password}}</td>
                   <td>{{$item->matriculation_id}}</td>
                   <td>
-                    <a class="text-decoration-none" href="{{ route('editRegister', $item->id ) }}">Editar</a>
+                    <a class="text-decoration-none" href="{{ route('editUserRegister', $item->id ) }}">Editar</a>
                     <br>
-                    <a class="text-decoration-none" href="{{ route('deleteRegister', $item->id ) }}">Excluir</a>
+                    <a class="text-decoration-none" href="{{ route('deleteUserRegister', $item->id ) }}">Excluir</a>
                   </td>
                 </tr>
               @endforeach

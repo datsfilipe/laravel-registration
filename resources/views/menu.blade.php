@@ -17,16 +17,64 @@
         h1 {
             font-weight: 700;
         }
+        a, a:hover, a:active {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+        }
+        .card {
+            border: 0.2;
+            border-radius: 1rem;
+            width: 600px;
+            height: 320px;
+        }
+
+        .btn-custom {
+            background-color: black;
+            border: 0;
+            width: 160px;
+            height: 50px;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            padding: 9px;
+        }
+        #card-top-header {
+            background-color: #19191A;
+            color: white;
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+        }
+        .row {
+            --bs-gutter-x: 0!important;
+            height: 50px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Choose an option</h1>
-        <div class="mb-3">
-            <a class="btn btn-primary btn-dark" href="{{route('register')}}" role="button">Register</a>
-        </div>
-        <div class="mb-3">
-            <a class="btn btn-primary btn-dark" href="{{route('showRegister')}}" role="button">Display entries</a>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card text-center shadow">
+            <div class="card-header shadow" id="card-top-header">
+                <h2 class="fw-bold">Choose an option</h2>
+            </div>
+            <div class="card-body d-flex flex-direction-column justify-content-center">
+                <!--Options for user-->
+                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                    <a class="btn-custom shadow" href="{{route('userRegister')}}">Register user</a>
+                </div>
+                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                    <a class="btn-custom shadow" href="{{route('showUserRegister')}}">Display users</a>
+                </div>
+                <!--Options for adress-->
+                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                    <a href="{{route('adressRegister')}}" class="btn-custom">Register adress</a>
+                </div>
+                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                    <a href="{{route('showAdressRegister')}}" class="btn-custom">Display adresses</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>

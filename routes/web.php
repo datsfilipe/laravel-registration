@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+# Routes user
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,16 +23,32 @@ Route::get('/menu', function (){
     return view('menu');
 });
 
-Route::get('/register', function (){
-    return view('register');
-})->name('register');
+Route::get('/user/register', function (){
+    return view('user.user-register');
+})->name('userRegister');
 
-Route::get('/show-register', 'App\Http\Controllers\ControllerRegister@showRegister')->name('showRegister');
+Route::get('/user/show-register', 'App\Http\Controllers\ControllerRegister@showUserRegister')->name('showUserRegister');
 
-Route::post('/finish-register', 'App\Http\Controllers\ControllerRegister@saveRegister')->name('finishRegister');
+Route::post('/user/finish-register', 'App\Http\Controllers\ControllerRegister@saveUserRegister')->name('saveUserRegister');
 
-Route::get('/edit-register/{id}', 'App\Http\Controllers\ControllerRegister@editRegister')->name('editRegister');
+Route::get('/user/edit-register/{id}', 'App\Http\Controllers\ControllerRegister@editUserRegister')->name('editUserRegister');
 
-Route::get('/delete-register/{id}', 'App\Http\Controllers\ControllerRegister@deleteRegister')->name('deleteRegister');
+Route::get('/user/delete-register/{id}', 'App\Http\Controllers\ControllerRegister@deleteUserRegister')->name('deleteUserRegister');
 
-Route::post('/edit-register/save', 'App\Http\Controllers\ControllerRegister@saveEditedRegister')->name('saveEditedRegister');
+Route::post('/user/edit-register-save', 'App\Http\Controllers\ControllerRegister@saveEditedUserRegister')->name('saveEditedUserRegister');
+
+# Routes Adress
+
+Route::get('/adress/register', function () {
+    return view('adress.adress-register');
+})->name('adressRegister');
+
+Route::post('/adress/register-save', 'App\Http\Controllers\ControllerAdress@saveAdressRegister')->name('saveAdressRegister');
+
+Route::get('/adress/show-register', 'App\Http\Controllers\ControllerAdress@showAdressRegister')->name('showAdressRegister');
+
+Route::get('/adress/edit-register/{id}', 'App\Http\Controllers\ControllerAdress@editAdressRegister')->name('editAdressRegister');
+
+Route::post('/adress/edit-register-save', 'App\Http\Controllers\ControllerAdress@saveEditedAdressRegister')->name('saveEditedAdressRegister');
+
+Route::get('/adress/delete-register/{id}', 'App\Http\Controllers\ControllerAdress@deleteAdressRegister')->name('deleteAdressRegister');

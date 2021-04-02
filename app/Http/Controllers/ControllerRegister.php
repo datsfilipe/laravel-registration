@@ -7,7 +7,9 @@ use App\Models\User;
 
 class ControllerRegister extends Controller
 {
-    public function saveRegister(Request $request)
+    # User Functions
+
+    public function saveUserRegister(Request $request)
     {
         $user = new User();
         $user->name = $request->name;
@@ -16,21 +18,19 @@ class ControllerRegister extends Controller
         $user->matriculation_id = $request->matriculation_id;
         $user->save();
 
-        return view('finish-register', compact('user'));
+        return view('user.finish-user-register', compact('user'));
     }
-
-    public function showRegister()
+    public function showUserRegister()
     {
         $users = User::all();
-        return view('show-register', compact('users'));
+        return view('user.show-user-register', compact('users'));
     }
-
-    public function editRegister($id)
+    public function editUserRegister($id)
     {   
         $user = User::where('id', $id)->first();
-        return view('edit-register', compact('user'));
+        return view('user.edit-user-register', compact('user'));
     }
-    public function saveEditedRegister(Request $request)
+    public function saveEditedUserRegister(Request $request)
     {   
         $user = User::where('id', $request->id)->first();
         $user -> name = $request-> name;
@@ -38,12 +38,11 @@ class ControllerRegister extends Controller
         $user -> password = $request-> password;
         $user -> matriculation_id = $request-> matriculation_id;
         $user -> update();
-        return redirect(route('showRegister'));
+        return redirect(route('showUserRegister'));
     }
-
-    public function deleteRegister($id)
+    public function deleteUserRegister($id)
     {
         User::destroy($id);
-        return redirect(route('showRegister'));
+        return redirect(route('showUserRegister'));
     }
 }
