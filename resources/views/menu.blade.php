@@ -31,12 +31,10 @@
             width: 600px;
             height: 320px;
         }
-
         .btn-custom {
             background-color: black;
             border: 0;
-            width: 160px;
-            height: 50px;
+            height: 90px;
             font-size: 1rem;
             border-radius: 0.5rem;
             padding: 9px;
@@ -49,7 +47,7 @@
         }
         .row {
             --bs-gutter-x: 0!important;
-            height: 50px;
+            height: 40px;
         }
     </style>
 </head>
@@ -59,19 +57,19 @@
             <div class="card-header shadow" id="card-top-header">
                 <h2 class="fw-bold">Choose an option</h2>
             </div>
-            <div class="card-body d-flex flex-direction-column justify-content-center">
+            <div class="mt-3 card-body flex-direction-column align-items-center">
                 <!--Options for user-->
-                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                <div class="row d-block align-items-center col mb-3" style="margin-left: 5px; margin-right: 5px;">
                     <a class="btn-custom shadow" href="{{route('userRegister')}}">Register user</a>
                 </div>
-                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                <div class="row d-block align-items-center col mb-3" style="margin-left: 5px; margin-right: 5px;">
                     <a class="btn-custom shadow" href="{{route('showUserRegister')}}">Display users</a>
                 </div>
                 <!--Options for adress-->
-                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                <div class="row d-block align-items-center col mb-3" style="margin-left: 5px; margin-right: 5px;">
                     <a href="{{route('adressRegister')}}" class="btn-custom">Register adress</a>
                 </div>
-                <div class="row mb-3" style="margin-left: 5px; margin-right: 5px;">
+                <div class="row d-block align-items-center col mb-3" style="margin-left: 5px; margin-right: 5px;">
                     <a href="{{route('showAdressRegister')}}" class="btn-custom">Display adresses</a>
                 </div>
             </div>
