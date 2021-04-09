@@ -52,3 +52,17 @@ Route::get('/adress/edit-register/{id}', 'App\Http\Controllers\ControllerAdress@
 Route::post('/adress/edit-register-save', 'App\Http\Controllers\ControllerAdress@saveEditedAdressRegister')->name('saveEditedAdressRegister');
 
 Route::get('/adress/delete-register/{id}', 'App\Http\Controllers\ControllerAdress@deleteAdressRegister')->name('deleteAdressRegister');
+
+# Routes adress and user
+
+Route::post('/register-save', 'App\Http\Controllers\ControllerAdress@saveRegister')->name('saveRegister');
+
+Route::get('/register', 'App\Http\Controllers\ControllerAdress@register')->name('register');
+
+Route::get('/show-register', 'App\Http\Controllers\ControllerAdress@showRegister')->name('showRegister');
+
+Route::get('/edit-register', 'App\Http\Controllers\ControllerAdress@editRegister')->name('editRegister');
+
+Route::get('/delete-register', 'App\Http\Controllers\ControllerAdress@deleteRegister')->name('deleteRegister');
+
+Route::post('/save-edited-register', 'App\Http\Controllers\ControllerAdress@saveEditedRegister')->name('saveEditedRegister');

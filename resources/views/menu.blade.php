@@ -72,6 +72,12 @@
                 <div class="row d-block align-items-center col mb-3" style="margin-left: 5px; margin-right: 5px;">
                     <a href="{{route('showAdressRegister')}}" class="btn-custom">Display adresses</a>
                 </div>
+                <div class="row d-block align-items-center col mb-3" style="margin-left: 5px; margin-right: 5px;">
+                    <a href="{{route('register')}}" class="btn-custom">Register user/adress</a>
+                </div>
+                <div class="row d-block align-items-center col mb-3" style="margin-left: 5px; margin-right: 5px;">
+                    <a href="{{route('showRegister')}}" class="btn-custom">Display users/adresses</a>
+                </div>
             </div>
         </div>
     </div>
