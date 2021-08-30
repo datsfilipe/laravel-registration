@@ -21,3 +21,8 @@
 ### Running project
 
 <p align="justify">I used Apache to run the project, <a href="https://www.codecheef.org/article/how-to-deploy-laravel-project-with-apache-and-linux-server" >here</a> is a tutorial on how to run on Linux, I don't know about the other systems and I also don't tested the tutorial.</p>
+
+```bash
+# Clone the repository
+git clone <https://github.com/datsfilipe/laravel-registration.git>
+```
